@@ -47,6 +47,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.formLogin().loginPage("/login").usernameParameter("staticEmail2").passwordParameter("inputPassword2")
 				.permitAll();
 
+		http.requiresChannel().anyRequest().requiresSecure();
 	//	http.csrf().disable();
 
 	}
